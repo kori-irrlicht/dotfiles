@@ -44,7 +44,8 @@ beautiful.init( os.getenv("HOME") .. "/.config/awesome/themes/default/theme.lua"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "termite"
-editor = os.getenv("EDITOR") or "vim"
+--editor = os.getenv("EDITOR") or "emacs -nw"
+editor = "emacs -nw"
 editor_cmd = terminal .. " -e " .. editor
 
 
@@ -150,7 +151,6 @@ local function set_wallpaper(s)
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
         end
-        naughty.notify({text=wallpaper})
         gears.wallpaper.maximized(wallpaper, s, true)
     end
 end
