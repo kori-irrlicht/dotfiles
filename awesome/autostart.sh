@@ -7,6 +7,7 @@ function run {
 	fi
 }
 
-run xrandr --output HDMI-1 --left-of VGA-1
+run xrandr --output HDMI-1-1 --auto --output HDMI-A-2 --auto --right-of HDMI-1-1
 run compton --config ~/.config/compton/compton.conf
+run light-locker
 
