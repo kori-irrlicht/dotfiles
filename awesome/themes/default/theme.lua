@@ -12,28 +12,33 @@ local themes_path = os.getenv("HOME") .. "/.config/awesome/themes/"
 
 local theme = {}
 
-local font          = "Droid Sans Mono for Powerline Regular "
-theme.font          = font .. "10"
+-- local font          = "Droid Sans Mono for Powerline Regular "
+local font          = "Noto Sans Mono "
+theme.font          = font .. "Bold 11"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
+theme.bg_normal     = "#22222277"
+theme.bg_focus      = "#535d6c77"
+theme.bg_urgent     = "#ff000077"
+theme.bg_minimize   = "#44444477"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
+--theme.fg_normal     = "#aaaaaa"
+theme.fg_normal     = "#70cccc"
 theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = 5
-theme.border_width  = dpi(1)
+theme.border_width  = dpi(0)
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
 
 theme.hotkeys_font          = font .. "10"
 theme.hotkeys_description_font          = font .. "10"
+theme.hotkeys_bg = "#22222277"
+theme.hotkeys_label_fg = "#aaaaaa"
+theme.hotkeys_modifiers_fg = "#aaaaaa"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -105,7 +110,7 @@ theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/m
 --theme.wallpaper = themes_path.."default/bg.png"
 --theme.wallpaper = themes_path.."default/bg_new.jpg"
 theme.wallpaper = function(s)
-  if s.index == 2 then
+  if s.index == 1 then
     return themes_path.."default/bg_new.jpg"
   else
     return themes_path.."default/bg2_new.jpg"
