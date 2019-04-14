@@ -9,5 +9,6 @@ function run {
 
 run xrandr --output HDMI-1-1 --auto --output HDMI-A-2 --auto --right-of HDMI-1-1
 run compton --config ~/.config/compton/compton.conf
-run light-locker
+#run light-locker
+run xscreensaver
 

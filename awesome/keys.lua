@@ -142,6 +142,18 @@ keys.globalkeys = gears.table.join(
         awful.spawn(terminal .. " -e htop")
       end,
       {description = "htop", group = "launcher"}
+    ),
+    awful.key({ctrlkey, altkey}, "l",
+      function()
+        awful.util.spawn_with_shell("xscreensaver-command -lock")
+      end,
+      {description = "Lock screen", group = "screen"}
+    ),
+    awful.key({}, "XF86HomePage",
+      function()
+        awful.util.spawn_with_shell("~/.config/awesome/toggleScreen.sh")
+      end,
+      {description = "Toggle second screen", group = "screen"}
     )
 )
 
